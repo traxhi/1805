@@ -37,6 +37,40 @@
 
 <script>
 
+    var audio = new Audio('contagem_regressiva.mp3');
+    var audio2 = new Audio('subir.mp3');
+    var audio3 = new Audio('descer.mp3');
+
+    function playAudio() 
+    {
+        audio.play();
+    }
+    setTimeout(playAudio, 500)
+
+    function playAudio2() 
+    {
+        audio2.play();
+    }
+    setTimeout(playAudio2, 15000)
+
+    function pausarAudio()
+    {
+        audio.pause()
+    }
+    setTimeout(pausarAudio, 15000)
+
+    function pausarAudio2()
+    {
+        audio2.pause()
+    }
+    setTimeout(pausarAudio2, 20000)
+
+    function playAudio3() 
+    {
+        audio3.play();
+    }
+    setTimeout(playAudio3, 20000)
+
 data = new Date()
 tempo_inicial = data.getTime()
 
@@ -70,7 +104,7 @@ function Pega_Tecla(e)
 }
 
 
-    temporizador = setTimeout(Subir,1000)
+    temporizador = setTimeout(Subir,20000)
 
     x = 750
     y = 100
@@ -80,9 +114,9 @@ function Pega_Tecla(e)
     function Subir()
     {
         TOPO = y + "px"
-        $("#foguete").animate({top:TOPO},1000)
+        $("#foguete").animate({top:TOPO},20000)
         temporizador = null
-        temporizador = setInterval(Descer,1000)
+        temporizador = setInterval(Descer,20000)
     }
 
     function Descer()
